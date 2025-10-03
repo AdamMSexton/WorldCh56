@@ -43,28 +43,46 @@
                                 <rect key="frame" x="115.66666666666669" y="126" width="162" height="85.333333333333314"/>
                                 <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="h02-NU-xk9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="08i-aK-XYP"/>
+                            <constraint firstItem="Oxe-4y-ZCV" firstAttribute="centerX" secondItem="h02-NU-xk9" secondAttribute="centerX" id="0WA-iV-dAL"/>
                             <constraint firstItem="ZH1-3K-PaO" firstAttribute="top" secondItem="iXA-ej-Ihc" secondAttribute="bottom" constant="8" id="8jV-gk-ffb"/>
+                            <constraint firstItem="h02-NU-xk9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BAd-6S-QZK"/>
                             <constraint firstItem="h02-NU-xk9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BNi-vf-rux"/>
                             <constraint firstItem="ZH1-3K-PaO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GC4-5j-Eko"/>
                             <constraint firstItem="h02-NU-xk9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="HFt-jq-qUv"/>
                             <constraint firstItem="9EF-Nz-3cl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LEE-Pi-rwx"/>
+                            <constraint firstItem="9EF-Nz-3cl" firstAttribute="centerX" secondItem="h02-NU-xk9" secondAttribute="centerX" id="ZSq-RH-vGh"/>
                             <constraint firstItem="iXA-ej-Ihc" firstAttribute="top" secondItem="Oxe-4y-ZCV" secondAttribute="bottom" constant="8" id="eS9-Mi-zX2"/>
                             <constraint firstItem="9EF-Nz-3cl" firstAttribute="top" secondItem="ZH1-3K-PaO" secondAttribute="bottom" constant="8" id="gZQ-yG-gtO"/>
+                            <constraint firstItem="iXA-ej-Ihc" firstAttribute="centerX" secondItem="h02-NU-xk9" secondAttribute="centerX" id="iI9-OB-Cs6"/>
                             <constraint firstItem="Oxe-4y-ZCV" firstAttribute="top" secondItem="h02-NU-xk9" secondAttribute="bottom" constant="8" id="lNz-84-2TV"/>
                             <constraint firstItem="Oxe-4y-ZCV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lTN-dX-U6D"/>
                             <constraint firstItem="iXA-ej-Ihc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oCD-Yj-Ohs"/>
+                            <constraint firstItem="ZH1-3K-PaO" firstAttribute="centerX" secondItem="h02-NU-xk9" secondAttribute="centerX" id="yNi-v4-pSy"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="faK-ci-2SA" appends="YES" id="Yq4-Dg-bUk"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Convert" image="thermometer.high" catalog="system" selectedImage="thermometer.high" id="WeV-ei-7wS"/>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="ZH1-3K-PaO" id="wff-Jt-Ve2"/>
+                        <outlet property="textField" destination="h02-NU-xk9" id="7RJ-oH-FKs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="faK-ci-2SA">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="Tgq-id-eIB"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
