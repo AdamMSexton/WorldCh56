@@ -14,7 +14,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     var fahrenheitValue: Measurement<UnitTemperature>? {
         didSet{
-
+            
             updateCelsiusLabel()
         }
     }
@@ -68,15 +68,21 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
-
+        // Corrected Line 65
+        if string.rangeOfCharacter(from: CharacterSet.letters) != nil {
+            return false
+        }
+        
         let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
         let replacementTextHasDecimalSeparator = string.range(of: ".")
-
+        
+        
         if existingTextHasDecimalSeparator != nil,
-            replacementTextHasDecimalSeparator != nil {
+           replacementTextHasDecimalSeparator != nil {
             return false
         } else {
             return true
         }
-    }}
+    }
+}
 
